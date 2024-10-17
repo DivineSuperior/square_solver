@@ -11,12 +11,41 @@ int main()
     double root_1 = 0;
     double root_2 = 0;
 
-    printf("Enter the coefficient a: ");
-    scanf("%lf", &a);
-    printf("Enter the coefficient b: ");
-    scanf("%lf", &b);
-    printf("Enter the coefficient c: ");
-    scanf("%lf", &c);
+    while (1)
+    {
+        printf("Enter the coefficient a: ");
+        if (scanf("%lf", &a) == 1)
+            break;
+        else
+        {
+            printf("Invalid input. Please enter a number.\n");
+            while(getchar() != '\n');
+        }
+    }
+
+    while (1)
+    {
+        printf("Enter the coefficient b: ");
+        if (scanf("%lf", &b) == 1)
+            break;
+        else
+        {
+            printf("Invalid input. Please enter a number.\n");
+            while(getchar() != '\n');
+        }
+    }
+
+    while (1) {
+        printf("Enter the coefficient c: ");
+        if (scanf("%lf", &c) == 1)
+            break;
+        else
+        {
+            printf("Invalid input. Please enter a number.\n");
+            while(getchar() != '\n');
+        }
+    }
+
 
     /*
     double isALetter = isdigit (a);
@@ -75,7 +104,7 @@ int main()
     discr = (pow(b,2) - (4 * a * c));
     double root_discr =pow(discr,(0.5));
     if (discr < 0)
-        printf("The discriminant is less than 0 so there are no roots!\n");
+        printf("The discriminant is less than 0 so there are no roots! \n");
 
     if (discr == 0)
     {
@@ -87,7 +116,7 @@ int main()
     {
         root_1 = (-b + root_discr) / (2 * a);
         root_2 = (-b - root_discr) / (2 * a);
-        printf("First root = %lf, Second root = %lf\n", root_1,root_2);
+        printf("First root = %lf, Second root = %lf \n", root_1,root_2);
     }
     return 0;
 }
