@@ -18,6 +18,7 @@ int main()
     printf("Enter the coefficient c: ");
     scanf("%lf", &c);
 
+    /*
     double isALetter = isdigit (a);
     double isBLetter = isdigit (b);
     double isCLetter = isdigit (c);
@@ -32,6 +33,7 @@ int main()
         printf("Enter the coefficient c: ");
         scanf("%lf", &c);
     }
+    */
 
     while ((a == 0) || (b == 0) || (c == 0))
     {
