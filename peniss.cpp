@@ -47,25 +47,15 @@ int main()
     }
 
 
-    /*
-    double isALetter = isdigit (a);
-    double isBLetter = isdigit (b);
-    double isCLetter = isdigit (c);
 
-    while ( (isALetter == 0) || (isBLetter == 0) || (isCLetter == 0) )
+    while (((a == 0) || (b == 0)) || ((a == 0) ||(c == 0)) || ((b == 0) || (c == 0)) )
     {
-        printf("The coefficients cannot be a letter. Try again eblan!\n");
-        printf("Enter the coefficient a: ");
-        scanf("%lf", &a);
-        printf("Enter the coefficient b: ");
-        scanf("%lf", &b);
-        printf("Enter the coefficient c: ");
-        scanf("%lf", &c);
-    }
-    */
+            if (a == 0 && b == 0 && c == 0 )
+            {
+                printf("The solution is any number");
+                break;
+            }
 
-    while ((a == 0) || (b == 0) || (c == 0))
-    {
         printf("The coefficients cannot be equal to 0. Try again dolbaeb! \n");
         printf("Enter the coefficient a: ");
         scanf("%lf", &a);
@@ -76,31 +66,6 @@ int main()
     }
 
 
-    /*
-    while ( (isALetter == 1) || (isBLetter == 1) || (isCLetter == 1) )
-    {
-        printf("The coefficients cannot be a letter. Try again eblan!\n");
-        printf("Enter the coefficient a: ");
-        scanf("%lf", &a);
-        printf("Enter the coefficient b: ");
-        scanf("%lf", &b);
-        printf("Enter the coefficient c: ");
-        scanf("%lf", &c);
-    }
-    */
-
-    /*
-    if ((c >= 'a') && (c <='z'))
-    {
-        printf("The coefficients cannot be letters. Try again debil! \n");
-        printf("enter the coefficient a: ");
-        scanf("%lf", &a);
-        printf("enter the coefficient b: ");
-        scanf("%lf", &b);
-        printf("enter the coefficient c: ");
-        scanf("%lf", &c);
-    }
-     */
     discr = (pow(b,2) - (4 * a * c));
     double root_discr =pow(discr,(0.5));
     if (discr < 0)
