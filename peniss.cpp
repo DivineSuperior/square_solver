@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <ctype.h>
-
-// Функция для получения коэффициента от пользователя
+// РєРѕРјРјРµРЅС‚С‹ РїРѕР»РµС‚РµР»Рё РЅР°С…СѓР№
+// Г”ГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЇГ®Г«ГіГ·ГҐГ­ГЁГї ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ  Г®ГІ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї
 double getCoefficient(const char* prompt) {
     double value;
     while (1) {
@@ -11,7 +11,7 @@ double getCoefficient(const char* prompt) {
             break;
         } else {
             printf("Invalid input. Please enter a number.\n");
-            while(getchar() != '\n'); // Очистка буфера ввода
+            while(getchar() != '\n'); // ГЋГ·ГЁГ±ГІГЄГ  ГЎГіГґГҐГ°Г  ГўГўГ®Г¤Г 
         }
     }
     return value;
@@ -21,12 +21,12 @@ int main() {
     double a, b, c;
     double discr, root_1, root_2;
 
-    // Получаем коэффициенты с помощью функции
+    // ГЏГ®Г«ГіГ·Г ГҐГ¬ ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» Г± ГЇГ®Г¬Г®Г№ГјГѕ ГґГіГ­ГЄГ¶ГЁГЁ
     a = getCoefficient("Enter the coefficient a: ");
     b = getCoefficient("Enter the coefficient b: ");
     c = getCoefficient("Enter the coefficient c: ");
 
-    // Проверка на нулевые коэффициенты
+    // ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г­ГіГ«ГҐГўГ»ГҐ ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ»
     while ((a == 0 && b == 0 && c == 0) || (a == 0 && b == 0) || (a == 0 && c == 0) || (b == 0 && c == 0)) {
         if (a == 0 && b == 0 && c == 0) {
             printf("The solution is any number\n");
@@ -38,7 +38,7 @@ int main() {
         c = getCoefficient("Enter the coefficient c: ");
     }
 
-    // Вычисление дискриминанта и корней
+    // Г‚Г»Г·ГЁГ±Г«ГҐГ­ГЁГҐ Г¤ГЁГ±ГЄГ°ГЁГ¬ГЁГ­Г Г­ГІГ  ГЁ ГЄГ®Г°Г­ГҐГ©
     discr = (pow(b, 2) - (4 * a * c));
     double root_discr = pow(discr, 0.5);
 
